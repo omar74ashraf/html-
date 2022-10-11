@@ -7,24 +7,38 @@
     <title>Omar's First html project </title>
 
     <meta name="description" content="this is my first page" />
-
-
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Cairo:wght@700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>OMAR ASHRAF YOUSSEF &copy;</h1>
+        <h1 data-text="OMAR ASHRAF YOUSSEF">OMAR ASHRAF YOUSSEF</h1>
     </header>
     <main>
         <h2>موقع أبوسامية لتوظيف العاطلين</h2>
         <hr>
         <h3> أبوسامية الجدع بيضرب الودع </h3>
         <hr>
-        <img src="imgs/home/samy1.JPG" alt="" width="200">
-        <img src="imgs/home/samy2.JPG" alt="" width="200">
-        <img src="imgs/home/samy3.jpg" alt="" width="200">
+        <div class="photo">
+            <div class="photo1">
+                <img src="imgs/home/samy1.JPG" alt="" width="200">
+            </div>
+            <div class="photo2">
+                <img src="imgs/home/samy2.JPG" alt="" width="200">
+            </div>
+            <div class="photo3">
+                <img src="imgs/home/samy3.jpg" alt="" width="200">
 
-        <img src="imgs/home/Snapchat-217161351.jpg" alt="" width="150">
+            </div>
+            <div class="photo4">
+                <img src="imgs/home/Snapchat-217161351.jpg" alt="" width="200" height="270.66">
+            </div>
+        </div>
+        <p class="clear"></p>
 
         <hr>
         <br>
@@ -43,28 +57,43 @@
         </video>
         <br>
         <hr>
+        <br>
+
         <form method="get">
-            <div>
-                <label>اسم سيادتك</label>
-                <input type="text" required placeholder="انجز" name="user">
+
+            <div class="input-group">
+                <label for="name" class="name-label">First Name</label>
+                <input type="text" id="name" required class="input">
             </div>
+            <br>
             <div>
-                <label>اسم اللي خلفوك</label>
-                <input type="text" required placeholder="يابا اخلص" name="user">
+                <label for="my-name2" class="second-name">Last Name</label>
+
+                <input type="text" id="my-name2" required class="input">
             </div>
+            <br>
             <div>
-                <label>السيكو سيكو</label>
-                <input type="password" placeholder="password" name="pass">
+                <label for="passward" class="pass">Passward</label>
+
+                <input type="password" id="passward" required class="input">
             </div>
+            <br>
             <div>
-                <label>البريد الكرتوني</label>
-                <input type="email" placeholder="example:om@gmail.com" name="mail">
+                <label for="email" class="mail">Email Address</label>
+
+                <input type="email" id="email" required class="input">
             </div>
+            <br>
             <div>
-                <label>نمرتك</label>
-                <input type="text" required placeholder="+201064959033" name="number">
+                <label for="_phone" class="phone">Phone Number</label>
+
+                <input type="text" id="_phone" required class="input">
             </div>
+
+            <br>
+            <br>
             اختر :هل انت ؟
+            <br>
             <div>
                 <input id="win" type="radio" name="OS" value="Windows" />
                 <label for="win">حلوف</label>
@@ -86,11 +115,14 @@
                 <input id="num" type="number" name="number" min="0" max="100" step="10" value="0">
 
             </div>
+            <br>
+            <hr>
             لو حابب تجمع بين الصفات
             <div>
                 <input id="win1" type="checkbox" name="OS" value="Windows" />
                 <label for="win1">حلوف</label>
             </div>
+
             <div>
                 <input id="lin1" type="checkbox" name="OS" value="Linux" />
                 <label for="lin1">جاموس</label>
@@ -101,20 +133,92 @@
             </div>
             <br>
 
+
             <div>
-                <input type="submit" value="مش حافظ">
+                <label for="book">choose book</label>
+                <select name="book" id="book">
+                    <optgroup label="fantasy">
+                        <option value="1">book 1</option>
+                        <option value="2">book 2</option>
+                        <option value="3">book 3</option>
+                        <option value="4">book 4</option>
+                        <option value="5">book 5</option>
+                    </optgroup>
+                    <optgroup label="action">
+                        <option value="6">book 6</option>
+                        <option value="7">book 7</option>
+                        <option value="8">book 8</option>
+                        <option value="9">book 9</option>
+                        <option value="10">book 10</option>
+                    </optgroup>
+                </select>
+            </div>
+
+
+
+            <br>
+            <p>اكتب اللي في نفسك ي نجم</p>
+            <textarea name="subject" cols="30" rows="10" placeholder="write about your self"></textarea>
+            <hr>
+            <div>
+                <label>upload</label>
+                <input type="file">
+            </div>
+            <hr>
+            <div>
+                <label>search</label>
+                <input type="search">
+            </div>
+            <hr>
+            <div>
+                <label>URL</label>
+                <input type="url">
             </div>
             <div>
-                <input type="reset" value="عيد مالأول" />
+                <label>Data</label>
+                <input type="date">
+            </div>
+            <div>
+                <label>Month</label>
+                <input type="month">
+            </div>
+            <div>
+                <label>Time</label>
+                <input type="time">
+            </div>
+            <hr>
+            <div>
+                <label>Range</label>
+                <input type="range">
+            </div>
+            <hr>
+            <div>
+                <label>Data List</label>
+                <input list="programming" name="prog" placeholder="python">
+                <datalist id="programming">
+                    <option value="python">
+                    <option value="c#">
+                    <option value="c">
+                    <option value="c++">
+                </datalist>
+            </div>
+            <hr>
+            <div>
+                <button>اضغط براحه</button>
+            </div>
+            <hr>
+            <div>
+                <input type="submit" value="save">
+            </div>
+            <div>
+                <input type="reset" value="reset" />
 
             </div>
-
         </form>
 
-        <br>
+        <!-- <iframe src="https://www.filgoal.com/" width="800" height="400"></iframe> -->
 
-
-        <!-- <H4>MY SKILLS</H4>
+        <H4>MY SKILLS</H4>
         <ul>
             <li>c</li>
             <li>c++</li>
@@ -129,7 +233,7 @@
                 <a href="#75">about me</a>
             </li>
 
-        </ul> -->
+        </ul>
     </main>
     <!-- <nav>
         <Table border="1">
@@ -165,70 +269,98 @@
             </tfoot>
         </Table>
     </nav> -->
-
-
-    <a href="https://www.facebook.com/profile.php?id=100033985655278" target="_blank"
-        title="Go to omar's profile page">My facebook profile</a>
-    <br>
-    <hr>
-    <!-- <a href="#74" title="Go to 74">74th paragraph</a> -->
-    <br>
-    <hr>
-
-    <a href="mailto:omar74ashraf@gmail.com" title="omar's ashraf mail">mail me </a>
-    <br>
-    <hr>
-    <!-- <div>
-        <div>
-            <div>
-                <h6>Section-1</h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita, unde porro quam dolor quo
-                    officiis
-                    aliquam? Corporis numquam, tenetur doloremque veritatis eligendi voluptates aliquid sed, pariatur
-                    quis
-                    quibusdam illum.</p>
-                <span>100$</span>
-            </div>
-            <div>
-                <h6>Section-2</h6>
-                <p id="74"> omar Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita, unde porro
-                    quam
-                    dolor quo officiis aliquam? Corporis numquam, tenetur doloremque veritatis eligendi voluptates
-                    aliquid
-                    sed,
-                    pariatur quis quibusdam illum.</p>
-                <span>100$</span>
-            </div>
+    <div>
+        <div class="omar">
+            <a href="https://www.facebook.com/profile.php?id=100033985655278" target="_blank"
+                title="Go to omar's profile page">My facebook profile</a>
         </div>
-        <div>
-            <h6>Section-3</h6>
-            <p>Lorem <br> amet consectetur adipisicing elit. Tempore expedita, unde porro quam dolor quo officiis
-                aliquam?
-                Corporis numquam, tenetur doloremque veritatis eligendi voluptates aliquid sed, pariatur quis quibusdam
-                illum.</p>
+
+        <div class="omar2">
+            <a href="mailto:omar74ashraf@gmail.com" title="omar's ashraf mail">mail me</a>
+
+        </div>
+    </div>
+
+    <div>
+        <div class="p1">
+            <h6>Section-1</h6>
+            <p class="testt"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita, unde porro quam
+                dolor
+                quo
+                officiis
+                aliquam? Corporis numquam, tenetur doloremque veritatis eligendi voluptates aliquid sed, pariatur
+                quis
+                quibusdam illum.</p>
             <span>100$</span>
         </div>
-        <div>
+        <div class="p2">
+            <h6>Section-1</h6>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita, unde porro quam dolor
+                quo
+                officiis
+                aliquam? Corporis numquam, tenetur doloremque veritatis eligendi voluptates aliquid sed, pariatur
+                quis
+                quibusdam illum.</p>
+            <span>100$</span>
+        </div>
+        <div class="p3">
+            <h6>Section-1</h6>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita, unde porro quam dolor
+                quo
+                officiis
+                aliquam? Corporis numquam, tenetur doloremque veritatis eligendi voluptates aliquid sed, pariatur
+                quis
+                quibusdam illum.</p>
+            <span>100$</span>
+        </div>
+        <div class="p4">
             <h6>Section-4</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita, unde porro quam dolor quo
-                officiis
-                aliquam? Corporis numquam, tenetur doloremque veritatis eligendi voluptates aliquid sed, pariatur quis
-                quibusdam illum.</p>
+            <p> Lorem ipsum dolor sit amet consectetur <wbr> elit. Tempore expedita, unde porro <wbr> quam dolor
+            quo
+            officiis
+            aliquam? Corporis numquam, tenetur  doloremque veritatis eligendi <wbr> voluptates aliquid sed, pariatur
+            quis
+            quibusdam illum.</p>
             <span>100$</span>
         </div>
-        <div>
-            <h6 id="75">Section-5</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita, unde porro quam dolor quo
-                officiis
-                aliquam? Corporis numquam, tenetur doloremque veritatis eligendi voluptates aliquid sed, pariatur quis
-                quibusdam illum.</p>
+        <div class="p5">
+            <h6>Section-4</h6>
+            <p> Lorem ipsum dolor sit amet consectetur <wbr> elit. Tempore expedita, unde porro <wbr> quam dolor
+            quo
+            officiis
+            aliquam? Corporis numquam, tenetur <wbr> doloremque veritatis eligendi <wbr> voluptates aliquid sed, pariatur
+            quis
+            quibusdam illum.</p>
             <span>100$</span>
-        </div> -->
+        </div>
+    </div>
     <div>
         <p>hello, i'm <mark>omar</mark> </p>
         <p> وبندب اي حد علي التيكتوك</p>
     </div>
-    </div>
+
+    <span class="testtt">
+        <span class="test1">
+
+            test disply
+        </span>
+        <span class="test2">
+
+            test disply
+        </span>
+        <span class="test3">
+
+            test disply
+        </span>
+        <span class="test4">
+
+            test disply
+
+        </span>
+    </span>
+
+
+
 </body>
 
 </html>
